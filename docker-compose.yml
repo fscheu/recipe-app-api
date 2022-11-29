@@ -1,0 +1,20 @@
+#version of the docker composer that is used
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      #we want to build the current directory
+      args:
+        - DEV=true
+    ports:
+      - "8000:8000"
+      #maps the port from docker to our machine
+    volumes:
+      - ./app:/app
+      #maps our directory to docker container. Sync automatic
+      #command to run the app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+      
