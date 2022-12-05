@@ -3,6 +3,8 @@ version: "3.9"
 
 services:
   app:
+    depends_on:
+      - db
     build:
       context: .
       #we want to build the current directory
@@ -16,6 +18,9 @@ services:
       #maps our directory to docker container. Sync automatic
       #command to run the app
     command: >
+      sh -c "python manage.py wait_for_db &&
+              python manage.py migrate &&
+              python manage.py runserver 0.0.0.0:8000"
     environment:
       - DB_HOST=db
       - DB_NAME=devdb
