@@ -74,7 +74,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         ingredients = validated_data.pop("ingredients", [])
         recipe = Recipe.objects.create(**validated_data)
         self._get_or_create_tags(tags, recipe)
-        self._get_or_create_ingredients(ingredients,recipe)
+        self._get_or_create_ingredients(ingredients, recipe)
 
         return recipe
 
