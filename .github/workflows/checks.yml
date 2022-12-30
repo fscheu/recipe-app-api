@@ -18,5 +18,5 @@ jobs:
       - name: Test
         run: docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py test"
       - name: Lint
-        users: psf/black@stable
+        uses: psf/black@stable
         options: "--check --verbose"
