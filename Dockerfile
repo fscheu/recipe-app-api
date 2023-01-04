@@ -29,6 +29,7 @@ RUN python -m venv /py && \
     mkdir -p /vol/web/media && \
     mkdir -p /vol/web/static && \
     chown -R django-user:django-user /vol && \
+    # 755 means that you can do any change to that directory
     chmod -R 755 /vol
 
 # The concatenacion of commands is to not add differents "layers" in the docker image

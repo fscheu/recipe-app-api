@@ -16,6 +16,7 @@ services:
     volumes:
       #maps our directory to docker container. Sync automatic
       - ./app:/app
+      - dev-static-data:/vol/web
     #command to run the app
     command: >
       sh -c "python manage.py wait_for_db &&
@@ -38,3 +39,4 @@ services:
 
 volumes:
   dev-db-data:
+  dev-static-data:
