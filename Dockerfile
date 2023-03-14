@@ -31,7 +31,7 @@ RUN python -m venv /py && \
     mkdir -p /vol/web/static && \
     chown -R django-user:django-user /vol && \
     # 755 means that you can do any change to that directory
-    chmod -R 777 /vol && \
+    chmod -R 755 /vol && \
     # +x is for make the directory executable
     chmod -R +x /scripts
 
