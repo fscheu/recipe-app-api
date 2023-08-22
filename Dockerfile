@@ -21,8 +21,10 @@ RUN python -m venv /py && \
     if [ $DEV = "true" ]; \
     then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
+    # rm -rf removes the tmp directory
     rm -rf /tmp && \
     apk del .tmp-build-deps && \
+    # adduser is to not use the root user
     adduser \
     --disabled-password \
     --no-create-home \
@@ -36,8 +38,7 @@ RUN python -m venv /py && \
     chmod -R +x /scripts
 
 # The concatenacion of commands is to not add differents "layers" in the docker image
-# rm -rf removes the tmp directory
-# adduser is to not use the root user
+
 
 ENV PATH="/scripts:/py/bin:$PATH"
 
