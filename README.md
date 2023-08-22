@@ -1,18 +1,9 @@
-# recipe-app-api
-Build a Backend REST API with Python &amp; Django - Advanced
-
-## Course link:
-https://www.udemy.com/course/django-python-advanced/
-## Finished Course on GitHub:
-https://github.com/LondonAppDeveloper/recipe-app-api
-
-
-
 # Build a Backend REST API with Python, Django, and Docker
 
 Welcome to my GitHub repository for the course "Build a Backend REST API using Python, Django (3.2), Django REST Framework (3.12), Docker, GitHub Actions, Postgres and Test Driven Development!"
 
-![API](https://github.com/yourusername/yourrepositoryname/blob/main/api_image.jpg)
+## Course link:
+https://www.udemy.com/course/django-python-advanced/
 
 ## About the Course
 
@@ -31,3 +22,5 @@ Throughout the course, I gained valuable knowledge and skills, including:
 - Applying best practice principles such as adhering to PEP-8 coding standards.
 - Automating code checks using GitHub Actions.
 
+## Finished Course on GitHub:
+https://github.com/LondonAppDeveloper/recipe-app-api
